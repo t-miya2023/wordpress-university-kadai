@@ -1,5 +1,4 @@
-<?php get_header(); ?>
-
+    <?php get_header(); ?>
     <!-- Home -->
 
     <div class="home">
@@ -14,7 +13,6 @@
     </div>
 
     <!-- Course -->
-
     <div class="course">
       <div class="row content-body">
         <!-- Course -->
@@ -25,20 +23,26 @@
               <!-- Description -->
               <div class="tab_panel">
                 <div class="tab_panel_title"><?php the_title(); ?></div>
-                <div class="tab_panel_header">
-                </div>
                 <div class="tab_panel_content">
-                  <div class="course_image"><?php the_post_thumbnail(); ?></div>
+                  <div class="course_image">
+                    <?php
+                    $image = the_post_thumbnail();
+                      if(isset($image)){
+                      $image_url = $image['sizes']['large'];
+                    }
+                    ?>
+                    <img src="<?php echo $image_url ?>" alt="">
+                  </div>
                   <div class="tab_panel_text">
                     <p>
                       <?php the_content(); ?>
                     </p>
                   </div>
-                  <div class="campus_footer_content d-flex flex-row align-items-center justify-content-start">
+                  <div class="campas_footer_content d-flex flex-row align-items-center justify-content-start">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/clock.png"><span><?php the_time('Y年n月j日'); ?></span>
                   </div>
                   <hr>
-                  <div class="social_share">
+                  <div class="soical_share">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/facebook-square-brands.png" alt="">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/twitter-square-brands.png" alt="">
                   </div>
@@ -55,5 +59,4 @@
       </div>
     </div>
 
-    <!-- footer.php ここから -->
-<?php get_footer(); ?>
+    <?php get_footer(); ?>

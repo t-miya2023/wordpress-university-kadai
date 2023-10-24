@@ -10,7 +10,7 @@
   <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/styles/bootstrap4/bootstrap.min.css" />
   <link href="<?php echo get_template_directory_uri(); ?>/plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/styles/main_styles.css" />
-<?php wp_head(); ?>
+  <?php wp_head(); ?>
 </head>
 
 <body>
@@ -37,25 +37,19 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav flex-row ml-md-auto d-md-flex main_nav">
                 <li class="nav-item">
-                  <a class="nav-link" href="<?php echo home_url(); ?>/archives/category/news">
+                  <a class="nav-link" href="<?php echo home_url(); ?>/category/news">
                     NEWS
                     <p>ニュース</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="<?php echo home_url(); ?>/archives/category/event">
+                  <a class="nav-link" href="<?php echo home_url(); ?>/category/event">
                     EVENT
                     <p>イベント</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="<?php echo home_url(); ?>/archives/category/graduates">
-                    GRADUATES
-                    <p>卒業生の声</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="<?php echo home_url(); ?>/archives/course">
+                  <a class="nav-link" href="<?php echo home_url(); ?>/course">
                     COURSES
                     <p>コース</p>
                   </a>

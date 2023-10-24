@@ -8,7 +8,7 @@
                 <div class="footer_section footer_about">
                   <div class="footer_logo_container">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/logo_big.png" alt="" />
-                    <a href="<?php echo home_url(); ?>">
+                    <a href="">
                       <div class="footer_logo_text">Samurai University</div>
                     </a>
                   </div>
@@ -37,9 +37,9 @@
                 <div class="footer_section footer_links">
                   <div class="footer_links_container">
                     <ul>
-                      <li><a href="<?php echo home_url(); ?>/archives/category/news">ニュース</a></li>
-                      <li><a href="<?php echo home_url(); ?>/archives/category/event">イベント</a></li>
-                      <li><a href="<?php echo home_url(); ?>/archives/course">コース</a></li>
+                      <li><a href="<?php echo home_url(); ?>/category/news">ニュース</a></li>
+                      <li><a href="<?php echo home_url(); ?>/category/event">イベント</a></li>
+                      <li><a href="<?php echo home_url(); ?>/course">コース</a></li>
                       <li><a href="<?php echo home_url(); ?>/about">侍大学について</a></li>
                     </ul>
                   </div>
@@ -74,7 +74,8 @@
   <script type="text/javascript">
     $(".carousel").carousel();
   </script>
-<?php wp_footer(); ?>
+
+  <?php wp_footer(); ?>
 </body>
 
 </html>

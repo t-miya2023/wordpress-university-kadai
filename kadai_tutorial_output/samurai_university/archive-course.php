@@ -1,31 +1,29 @@
 <?php get_header(); ?>
-    <!-- Home -->
+<!-- Home -->
 
-    <div class="home">
-      <div class="breadcrumbs_container">
-        <div class="image_header">
-          <div class="header_info">
-            <div>Courses</div>
-            <div>コース</div>
-          </div>
-        </div>
+<div class="home">
+  <div class="breadcrumbs_container">
+    <div class="image_header">
+      <div class="header_info">
+        <div>Courses</div>
+        <div>コース</div>
       </div>
     </div>
+  </div>
+</div>
 
-    <!-- Courses -->
+<!-- Courses -->
 
-    <div class="courses">
-      <div class="footer_row">
-        <div class="row">
-          <div class="col-lg-12">
-            <p class="title">コース</p>
-            <div class="courses_container">
-              <div class="row courses_row">
-                <!-- Course -->
-                <?php  
-                  if(have_posts()):
-                    while(have_posts()):the_post();
-                ?>
+<div class="courses">
+  <div class="footer_row">
+    <div class="row">
+      <div class="col-lg-12">
+        <p class="title">コース</p>
+        <div class="courses_container">
+          <div class="row courses_row">
+            <!-- Course -->
+            <?php if (have_posts()) : ?>
+              <?php while (have_posts()) : the_post() ?>
                 <div class="col-lg-4 course_col">
                   <div class="course">
                     <div class="course_image">
@@ -37,7 +35,7 @@
                       </h3>
                       <div class="course_text">
                         <p>
-                          <?php echo wp_trim_words(get_the_content(),50,'...'); ?>
+                          <?php echo wp_trim_words(get_the_content(), 50, '...'); ?>
                         </p>
                       </div>
                     </div>
@@ -48,15 +46,12 @@
                     </div>
                   </div>
                 </div>
-                <?php  
-                endwhile;
-              endif;
-                ?>
-                
-              </div>
-            </div>
+              <?php endwhile; ?>
+            <?php endif; ?>
           </div>
         </div>
       </div>
     </div>
+  </div>
+</div>
 <?php get_footer(); ?>
