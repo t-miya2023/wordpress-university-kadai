@@ -15,13 +15,5 @@ function remove_default_jquery()
 
 
 add_action('wp_enqueue_scripts', 'remove_default_jquery');
-add_theme_support('post-thumbnails');
 
-//メニューを管理画面に追加
-add_theme_support('menus');
-
-function register_my_menus(){
-register_nav_menu('footer-menu', 'Footer_menu');
-}
-//上記メニューを登録 register_my_menusは自由に作成した関数
-add_action('after_setup_theme', 'register_my_menus');
+add_theme_support('post-thumnail');
